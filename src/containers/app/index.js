@@ -7,9 +7,24 @@ import { Menu } from '../../components/Menu/Menu';
 //routes
 import { RouterModule } from './routerModule';
 
-const App = () => (
-  <div className="app">   
-    <Menu routes={RouterModule}/>
+import { push } from 'connected-react-router'
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+
+const mapStateToProps = state => ({
+});
+
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(
+    {goToRoute: route => push(route)},
+    dispatch
+  );
+
+const App = ({
+  goToRoute
+  })=>(
+    <div className="app">   
+    <Menu routes={RouterModule} goToRoute={goToRoute} />
     <main>
       { 
         RouterModule.map((route, i) => {
@@ -20,4 +35,6 @@ const App = () => (
   </div>
 );
 
-export default App;
+export const AppContainer = connect(mapStateToProps, mapDispatchToProps)(
+  App
+);

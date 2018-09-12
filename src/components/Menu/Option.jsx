@@ -16,6 +16,7 @@ export class Option extends Component {
     render() {
         return (
             <OptionContainer
+                onClick={() => this.props.goToRoute()}
                 style={{...style}}>
                 {this.props.route.name}
             </OptionContainer>

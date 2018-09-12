@@ -8,7 +8,9 @@ export class Menu extends Component {
     }
     
     render() {
-        const routes = this.props.routes.map((route, i)=> <Option key={i} route={route} />);
+        const routes = this.props.routes.map((route, i)=> {
+            return <Option key={i} route={route} goToRoute={() => this.props.goToRoute(route.route)}/>
+        });
         return (
             <div style={style.menu}>
                 {routes}
