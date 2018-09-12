@@ -2,7 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 
 //components
-import { Menu } from '../../components/Menu';
+import { Menu } from '../../components/Menu/Menu';
 
 //routes
 import { RouterModule } from './routerModule';
