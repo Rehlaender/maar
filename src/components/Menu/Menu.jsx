@@ -1,24 +1,38 @@
 import React, { Component } from 'react';
+import { push } from 'connected-react-router'
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+
+import { RouterModule } from '../../routerModule';
 
 import { Option } from './Option';
 
-export class Menu extends Component {
-    constructor(props) {
-        super(props);
-    }
+const mapStateToProps = state => ({
     
-    render() {
-        const routes = this.props.routes.map((route, i)=> {
-            return <Option key={i} route={route} goToRoute={() => this.props.goToRoute(route.route)}/>
-        });
-        return (
-            <div style={style.menu}>
-                {routes}
-            </div>
-        )
-    }   
-}
+});
 
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(
+    {goToRoute: route => push(route)},
+    dispatch
+  );
+
+export const Menu = ({
+    goToRoute
+}) => (
+        <div style={style.menu}>
+            {
+                RouterModule.map((route, i)=> {
+                    return <Option key={i} route={route} goToRoute={() => goToRoute(route.route)}/>
+                })
+            }
+        </div>
+);
+
+export const MenuContainer = connect(mapStateToProps, mapDispatchToProps)(
+    Menu
+);
+  
 const style = {
     menu: {
         display: 'flex',

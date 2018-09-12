@@ -1,5 +1,5 @@
-import HomeContainer from '../home/homeContainer';
-import HelpContainer from '../help/helpContainer';
+import HomeContainer from './containers/home/homeContainer';
+import HelpContainer from './containers/help/helpContainer';
 
 export const RouterModule = [
     {name: 'Home', route: '/', component: HomeContainer},
