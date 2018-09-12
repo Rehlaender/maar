@@ -16,15 +16,9 @@ export class Option extends Component {
     render() {
         return (
             <OptionContainer
-                onClick={() => this.props.goToRoute()}
-                style={{...style}}>
+                onClick={() => this.props.goToRoute()}>
                 {this.props.route.name}
             </OptionContainer>
         )
     }   
 }
-
-const style = {
-    cursor: 'pointer'
-};
-
