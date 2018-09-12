@@ -13,7 +13,7 @@ const App = () => (
     <main>
       { 
         RouterModule.map((route, i) => {
-          return <Route exact={(i === 0)} path={route.route} component={route.component} />
+          return <Route key={i} exact={(i === 0)} path={route.route} component={route.component} />
         })
       }
     </main>
