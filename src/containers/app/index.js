@@ -1,14 +1,13 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
-
-import HomeContainer from '../home/homeContainer';
+import { Route,  } from 'react-router-dom';
 
 //routes
+import HomeContainer from '../home/homeContainer';
 
 const App = () => (
-  <div className="app">
+  <div className="app">   
     <main>
-      <Route path="*" component={Home} />
+      <Route path="*" component={HomeContainer} />
     </main>
   </div>
 );
