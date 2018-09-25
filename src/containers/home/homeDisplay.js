@@ -1,4 +1,5 @@
 import React from 'react'
+import Typed from 'react-typed';
 
 export const homeDisplay = ({
     hiState,
@@ -12,5 +13,10 @@ export const homeDisplay = ({
         <br/>  
         { `${user} said hi? ${hiState}` }
         <button onClick={() => {goToHelp()}}>go to abobut </button>  
+        <br/>  
+        <Typed 
+            strings={['test text']} 
+            typeSpeed={80} 
+        />
     </div>        
 );
