@@ -1,5 +1,7 @@
 import React from 'react'
 import Typed from 'react-typed';
+import Textures from "react-svg-textures"; 
+const Lines = Textures.Lines;
 
 export const homeDisplay = ({
     hiState,
@@ -18,5 +20,21 @@ export const homeDisplay = ({
             strings={['test text']} 
             typeSpeed={80} 
         />
+
+        <Texture />
     </div>        
 );
+
+const Texture = () => (
+    <svg width={200} height={200}>
+      <Lines
+        id='pattern'
+        strokeWidth={1}
+        stroke='black'
+        size={10}
+        orientation='diagonal'
+        background='blue'
+      />
+      <circle cx={100} cy={100} r={50} fill='url(#pattern)' />
+    </svg>
+  );
