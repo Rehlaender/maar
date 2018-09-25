@@ -3,13 +3,14 @@ import { Route } from 'react-router-dom';
 
 //components
 import { MenuContainer } from '../../components/Menu/Menu';
-
+import { GuyContainer } from '../../components/Guy/guyContainer';
 //routes
 import { RouterModule } from '../../routerModule';
 
 const App = () => (
-  <div className="app">   
+  <div className="app" style={{position: 'relative'}}>
     <MenuContainer />
+    <GuyContainer />
     <main>
       { 
         RouterModule.map((route, i) => {
