@@ -1,12 +1,15 @@
 import React from 'react'
-import { relative } from 'upath';
+import Typed from 'react-typed';
 
 export const guyDisplay = ({
+    guyState,
+    speech,
+    speechIsLoop
     })=>(
     <div style={style.fixedContainer}>
         <div style={style.guy}>
             <div style={style.dialogBox}>dialog</div>
-            <div style={style.body}>*body</div>
+            <div style={style.body}>*body {`${guyState}, ${speech}, ${speechIsLoop}`}</div>
         </div>
     </div>
 );

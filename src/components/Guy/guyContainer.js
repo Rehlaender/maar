@@ -7,7 +7,9 @@ import { connect } from 'react-redux';
 import { guyDisplay } from './guyDisplay';
 
 const mapStateToProps = state => ({
-  hiState: state.testReducer.saidHi,
+  guyState: state.guyReducer.guyState,
+  speech: state.guyReducer.speech,
+  speechIsLoop: state.guyReducer.speechIsLoop,
 });
 
 const mapDispatchToProps = dispatch =>
