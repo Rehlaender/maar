@@ -1,6 +1,7 @@
 import React from 'react'
 import Typed from 'react-typed';
-import Textures from "react-svg-textures"; 
+import Textures from 'react-svg-textures';
+import {pine} from '../../assets/svg/tree';
 const Lines = Textures.Lines;
 
 export const homeDisplay = ({
@@ -20,13 +21,12 @@ export const homeDisplay = ({
             strings={['test text']} 
             typeSpeed={80} 
         />
-
         <Texture />
     </div>        
 );
 
 const Texture = () => (
-    <svg width={200} height={200}>
+    <svg width={500} height={500}>
       <Lines
         id='pattern'
         strokeWidth={1}
@@ -36,5 +36,6 @@ const Texture = () => (
         background='blue'
       />
       <circle cx={100} cy={100} r={50} fill='url(#pattern)' />
+      <path d={pine} fill='url(#pattern)'></path>
     </svg>
   );
