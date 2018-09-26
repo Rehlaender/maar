@@ -29,8 +29,11 @@ const style = {
     }, 
     dialogBox: {
         position: 'absolute',
-        top: '-20px',
-        left: '-100px',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        top: '-200px',
+        left: '-300px',
         width: '100px',
         height: '100px',
         background: 'black'

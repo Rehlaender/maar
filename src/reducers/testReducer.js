@@ -9,7 +9,7 @@ export default (state = initialState, action) => {
             console.log(action, 'action -> payload');
             return {
                 ...state, 
-                saidHi: true,
+                saidHi: !state.saidHi,
                 user: action.payload
             }
         default: 

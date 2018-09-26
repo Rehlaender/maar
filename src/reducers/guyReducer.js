@@ -6,7 +6,7 @@ const guyStates = {
 const guySpeeches = {
     WELCOME: (name) => [`Welcome to my webpage, ${name}`],
     IDLE: ['...'],
-    BLABLABLA: ['bla','ble','bli']
+    BLABLABLA: ['I am','so','tired']
 };
 const initialState = {
     guyState: guyStates.IDLE,
@@ -24,7 +24,7 @@ export default (state = initialState, action) => {
                 speech: guySpeeches.IDLE,
                 speechIsLoop: true,
             }
-        case 'SAY_HI':
+        case '_HI':
             console.log(action, 'action -> go idle');
             return {
                 ...state,
