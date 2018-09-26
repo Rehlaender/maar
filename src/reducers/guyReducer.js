@@ -4,12 +4,13 @@ const guyStates = {
 };
 
 const guySpeeches = {
-    WELCOME: (name) => {`Welcome to my webpage, ${name}`},
-    IDLE: '...'
+    WELCOME: (name) => [`Welcome to my webpage, ${name}`],
+    IDLE: ['...'],
+    BLABLABLA: ['bla','ble','bli']
 };
 const initialState = {
     guyState: guyStates.IDLE,
-    speech: guySpeeches.IDLE,
+    speech: guySpeeches.BLABLABLA,
     speechIsLoop: true,
 };
   

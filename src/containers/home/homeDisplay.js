@@ -1,5 +1,4 @@
 import React from 'react'
-import Typed from 'react-typed';
 import Textures from 'react-svg-textures';
 import {pine} from '../../assets/svg/tree';
 const Lines = Textures.Lines;
@@ -12,17 +11,12 @@ export const homeDisplay = ({
     })=>(
     <div className="homeContainer">
         <h1>home</h1>
-        <button onClick={() => {sayHi('mario')}}>say hi</button>  
+        <button onClick={() => {sayHi('mario')}}>say hi</button>
         <br/>  
         { `${user} said hi? ${hiState}` }
-        <button onClick={() => {goToHelp()}}>go to abobut </button>  
-        <br/>  
-        <Typed 
-            strings={['test text']} 
-            typeSpeed={80} 
-        />
+        <button onClick={() => {goToHelp()}}>go to abobut </button>
         <Texture />
-    </div>        
+    </div>
 );
 
 const Texture = () => (

@@ -8,7 +8,13 @@ export const guyDisplay = ({
     })=>(
     <div style={style.fixedContainer}>
         <div style={style.guy}>
-            <div style={style.dialogBox}>dialog</div>
+            <div style={style.dialogBox}>
+                <Typed 
+                strings={[...speech]} 
+                typeSpeed={80}
+                loop={speechIsLoop} 
+                />
+            </div>
             <div style={style.body}>*body {`${guyState}, ${speech}, ${speechIsLoop}`}</div>
         </div>
     </div>
